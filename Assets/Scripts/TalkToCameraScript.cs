@@ -13,7 +13,7 @@ public class TalkToCameraScript : MonoBehaviour
         _camera = GameObject.Find("Camera").GetComponent<CameraScripts>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         _camera.CameraLocation = _nextLocation;
     }

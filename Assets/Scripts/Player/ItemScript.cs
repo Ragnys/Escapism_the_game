@@ -22,13 +22,18 @@ public class ItemScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _carryScript.PickUp(false, gameObject);
+        _carryScript.PickUp(false, null);
     }
 
 
-    void InteractedWith(bool carried)
+    public void InteractedWith(bool carried)
     {
         _collider.enabled = carried;
         _child.gameObject.SetActive(carried);
+    }
+
+    private void End()
+    {
+        Destroy(gameObject);
     }
 }

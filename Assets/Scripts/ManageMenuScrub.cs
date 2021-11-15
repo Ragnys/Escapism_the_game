@@ -25,4 +25,10 @@ public class ManageMenuScrub : ScriptableObject
         Application.Quit();
 #endif
     }
+
+    public void GivePlayerControll(bool active)
+    {
+        GameObject.Find("Player").GetComponent<MovementScript>().enabled = active;
+    }
+
 }
